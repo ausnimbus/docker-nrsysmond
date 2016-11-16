@@ -16,11 +16,8 @@ ExecStart=/usr/bin/docker run --name nrsysmond \
 --privileged=true \
 --net=host \
 -e NRSYSMOND_license_key=YOUR_LICENSE_KEY_HERE \
-newrelic/nrsysmond:latest
+ausnimbus/nrsysmond:latest
 ExecStop=/usr/bin/docker stop -t 30 nrsysmond
 
 [Install]
 WantedBy=multi-user.target
-
-[X-Fleet]
-Global=true
