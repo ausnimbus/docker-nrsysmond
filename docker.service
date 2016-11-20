@@ -10,6 +10,7 @@ ExecStartPre=-/usr/bin/docker rm nrsysmond
 ExecStartPre=/usr/bin/docker pull newrelic/nrsysmond:latest
 ExecStart=/usr/bin/docker run --name nrsysmond \
 --pid=host \
+-v /:/host \
 -v /var/run/docker.sock:/var/run/docker.sock \
 -v /dev:/dev \
 -v /sys:/sys \
