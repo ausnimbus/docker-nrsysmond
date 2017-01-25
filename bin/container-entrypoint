@@ -1,6 +1,4 @@
 #!/bin/bash
 set -e
 
-nrsysmond-config --set license_key=${NRSYSMOND_license_key}
-
 exec $@

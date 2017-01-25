@@ -24,4 +24,4 @@ RUN apk add --allow-untrusted glibc-${GLIBC_VERSION}.apk && \
 COPY bin/container-entrypoint /usr/sbin/
 
 ENTRYPOINT ["container-entrypoint"]
-CMD ["nrsysmond", "-c", "/etc/newrelic/nrsysmond.cfg", "-l", "/dev/stdout", "-f"]
+CMD ["/usr/sbin/nrsysmond", "-E", "-F", "-l", "/dev/stdout"]
