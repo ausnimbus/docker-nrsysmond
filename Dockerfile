@@ -1,4 +1,4 @@
-FROM ausnimbus/alpine:latest
+FROM alpine:latest
 
 MAINTAINER AusNimbus <support@ausnimbus.com.au>
 
